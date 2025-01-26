@@ -1,10 +1,9 @@
 public class Tut1 {
 
     public static void main(String[] args) {
-        int a= 2;
+        int a = 2;
         int b = 3;
         var c = 9;
-
         byte m = 127;
         short sh = 5567;
         long lg = 78l;
@@ -42,5 +41,8 @@ public class Tut1 {
         };
 
         System.out.println(result);
+        StringBuffer str = new StringBuffer("Saurav Gupta");
+        str.setCharAt(0, 'G');
+        System.out.println(str);
     }
 }
