@@ -10,7 +10,7 @@ public class Main {
         String pass = "Saurav@1";
         String query = "SELECT * FROM student";
         String insertQuery = "INSERT INTO student VALUES (111, '" + "Sarthak" + "')";
-//        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection(url, usn, pass);
         Statement st = con.createStatement();
 
