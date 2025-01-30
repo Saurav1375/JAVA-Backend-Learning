@@ -3,12 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
-    
+    <!--
     <servlet>
         <servlet-name>Greet</servlet-name>
         <servlet-class>org.example.servlet.GreetServlet</servlet-class>
+
+        <init-param>
+            <param-name>Phone</param-name>
+            <param-value>Samsung Galaxy S20 FE</param-value>
+        </init-param>
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>Greet</servlet-name>
         <url-pattern>/greet</url-pattern>
@@ -23,4 +28,11 @@
         <servlet-name>New</servlet-name>
         <url-pattern>/gt</url-pattern>
     </servlet-mapping>
+    -->
+
+
+    <context-param>
+        <param-name>Phone</param-name>
+        <param-value>OnePlus Nord CE 3</param-value>
+    </context-param>
 </web-app>

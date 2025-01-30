@@ -1,11 +1,14 @@
 package org.example.servlet;
 
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
+@WebServlet("/gt")
 public class NewServlet  extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         //using req dispatcher
@@ -24,10 +27,16 @@ public class NewServlet  extends HttpServlet {
         for (Cookie cookie : cookies) {
             if (cookie.getName().equals("name")) {
                 user = cookie.getValue();
+                break;
             }
         }
 
         PrintWriter out = res.getWriter();
         out.println("Welcome " + user);
+
+        //servlet context
+        ServletContext context = getServletContext();
+        String phone = context.getInitParameter("Phone");
+        out.println(phone);
     }
 }
