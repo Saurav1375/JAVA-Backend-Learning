@@ -13,4 +13,14 @@
         <servlet-name>Greet</servlet-name>
         <url-pattern>/greet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>New</servlet-name>
+        <servlet-class>org.example.servlet.NewServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>New</servlet-name>
+        <url-pattern>/gt</url-pattern>
+    </servlet-mapping>
 </web-app>
