@@ -16,10 +16,12 @@
     int i  = 3; //declarative block
 %>
 <%
+
     //scriptlet
     String name = request.getParameter("name");
     PrintWriter outPrinter = response.getWriter();
     outPrinter.println("Hello " + name);
+    $
     /*
     * Session
     * out

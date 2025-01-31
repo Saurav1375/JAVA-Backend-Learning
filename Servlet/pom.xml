@@ -18,6 +18,11 @@
   </properties>
 
   <dependencies>
+      <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>jstl</artifactId>
+          <version>1.2</version>
+      </dependency>
 <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
@@ -33,6 +38,8 @@
       <artifactId>jersey-media-json-jackson</artifactId>
       <version>4.0.0-M1</version>
     </dependency>
+
+
 <dependency>
       <groupId>org.glassfish.jersey.inject</groupId>
       <artifactId>jersey-cdi2-se</artifactId>
@@ -42,7 +49,7 @@
       <artifactId>weld-se-core</artifactId>
       <version>6.0.0.Beta4</version>
     </dependency>
-<dependency>
+      <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>${junit.version}</version>
@@ -54,6 +61,8 @@
         <version>${junit.version}</version>
         <scope>test</scope>
       </dependency>  </dependencies>
+
+
 
   <build>
     <plugins>
