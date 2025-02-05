@@ -34,9 +34,6 @@ public class JournalController {
     @PostMapping("/{username}")
     public ResponseEntity<?> createJournalEntry(@PathVariable String username, @RequestBody JournalEntry journalEntry) {
         try {
-            if (user == null) {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            }
             journalService.saveJournal(journalEntry, username);
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (Exception e) {
