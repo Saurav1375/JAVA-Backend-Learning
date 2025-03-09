@@ -16,12 +16,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("{userName}")
+    @GetMapping("/{userName}")
     public User getUserByUserName(@PathVariable String userName) {
         return userService.getUserByUserName(userName);
     }
 
-    @GetMapping("{userId}")
+    @GetMapping("/{userId}")
     public User getUserByUserId(@PathVariable ObjectId userId) {
         return userService.getUserById(userId).orElse(null);
     }
